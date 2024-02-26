@@ -13,6 +13,7 @@
     href="https://github.com/lisaviktorsson/lisaviktorsson.github.com"
     >GitHub</a
   >
+  <a href="/photoapp">Photo App</a>
 </nav>
 
 <hr />
