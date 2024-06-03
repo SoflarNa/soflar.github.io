@@ -23,3 +23,16 @@ if (browser) {
                 console.log(value)
         })
 }
+
+const chat = browser ? window?.localStorage.getItem('chat') ?? "" : ""
+/* https://svelte.dev/tutorial/writable-stores */
+export const chat_store = writable(chat)
+
+if (browser) {
+        /* https://svelte.dev/tutorial/auto-subscriptions */
+        chat_store.subscribe((value) => {
+                /* on changes to the story_id_store, update the localStorage in the browser. */
+                window?.localStorage.setItem('chat', value);
+                console.log(value)
+        })
+}

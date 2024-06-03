@@ -14,7 +14,7 @@
     // TODO: and card is already not flipped
     if (card.flipped && flipcount < 2) {
       // TODO: Probably do what?
-
+        
       // flip the cards over after 2s from seeing both cards
       if (flipcount == 4) {
         setTimeout(() => {
@@ -24,13 +24,21 @@
           });
           flipcount = 0;
           cards = cards;
+          
         }, 2000);
       }
       cards = cards;
+      
     } else {
-      alert("chill");
+      blueTurn = !blueTurn
+      flipcount = 0
     }
   }
+  
+let redPlayer = 0
+let bluePlayer = 0
+let blueTurn = true
+
 </script>
 
 <main>
@@ -39,9 +47,11 @@
       <div
         on:click={() => {
           flip(card);
+          flipcount++
         }}
         on:keypress={() => {
           flip(card);
+          flipcount++
         }}
         class:flipped={card.flipped}
         class="card"
@@ -51,6 +61,10 @@
       </div>
     {/each}
   </div>
+  <div class="box", id="red-box"><p>{redPlayer}</p></div>
+  <div class="box", id="blue-box"><p>{bluePlayer}</p></div>
+  <div class="box", id="turn-box" style={blueTurn?"right: 10px;":"left:10px"}></div>
+
 </main>
 
 <style>
@@ -114,4 +128,30 @@
     -webkit-backface-visibility: hidden;
     position: absolute;
   }
+  .box {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  text-align: center; 
+  font-size: 30px;
+  }
+  #red-box, #blue-box{
+  bottom: 0px;
+  z-index: 2;
+  }
+  #red-box {
+  background-color: red;
+  left: 0px;
+  }
+  #blue-box {
+  background-color: blue;
+  right: 0px;
+  }
+  #turn-box{
+  bottom: 10px;
+  z-index: 1;
+  background-color: greenyellow;
+  box-shadow: 0 0 20px 20px greenyellow;
+  }
+
 </style>

@@ -4,27 +4,28 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_page-1ee78754.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-a1d04a99.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-0b635c87.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-f282f2e0.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-ac8be006.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/control-f5b05b5f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/parse-f0c618df.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-78c6221d.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/register/_page.svelte-a161969e.js">
+		
+		<link href="./_app/immutable/assets/10.1ee78754.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.121f2455.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.65d438b6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.6b9960f4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.f7a307f4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/parse.bee59afc.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.5dbf6de2.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.a4192956.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.c16525b6.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/10.b80364dd.js">
 	</head>
 	<body>
 		<div style="display: contents">
 
 
+
 <nav><a href="/">Hem</a>
   <a href="/memory">Memory</a>
   <a href="/telltale">Telltale</a>
+  <a href="/todo">Todo</a>
+  <a href="/register">Register</a>
 
   <a target="_blank" rel="noreferrer" href="https://github.com/lisaviktorsson/lisaviktorsson.github.com">GitHub</a>
   <a href="/photoapp">Photo App</a></nav>
@@ -48,21 +49,31 @@
 </form>
 
 
-		<script type="module" data-sveltekit-hydrate="1dtltqo">
-			import { start } from "./_app/immutable/start-a1d04a99.js";
+			
+			<script>
+				{
+					__sveltekit_25hs7r = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
 
-			start({
-				env: {},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="1dtltqo"]').parentNode,
-				version: "1712567109508",
-				hydrate: {
-					node_ids: [0, 11],
-					data: [null,null],
-					form: null
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.121f2455.js"),
+						import("./_app/immutable/entry/app.5dbf6de2.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 10],
+							data,
+							form: null,
+							error: null
+						});
+					});
 				}
-			});
-		</script>
-	</div>
+			</script>
+		</div>
 	</body>
 </html>

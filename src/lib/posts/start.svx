@@ -1,9 +1,14 @@
 ---
-title: Projektstart
-date: "2024-02-21"
-keywords: ["planning"]
+title: Inlägg 1
+date: "2024-05-06"
+keywords: ["uppstart, styling"]
 ---
 
-Hello, I am _Post One._
+Hittills har jag bara hunnit starta upp min sida.
+Jag har stylat min förstasida och börjat lägga in mina recept på förstasidan.
+Jag har lagt in recepten som objekt i en lista med egenskaperna namn, bild, tid och ingredienser.
 
-**Nice to meet you!**
+```
+let recepies = [{name:"Chokladboll", image: "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_240269/cf_259/chokladbollar.jpg",
+            time:60, recept:[{gram:100, ingrediens:"smör"}]},...]
+```
